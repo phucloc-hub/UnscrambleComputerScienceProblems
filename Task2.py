@@ -3,6 +3,8 @@ Read file into texts and calls.
 It's ok if you don't understand how to read files
 """
 import csv
+from datetime import datetime
+from collections import deque, defaultdict
 with open('texts.csv', 'r') as f:
     reader = csv.reader(f)
     texts = list(reader)
@@ -21,17 +23,17 @@ September 2016.".
 """
 year = 2016
 month = 9
-phone_and_time = dict()
+phone_and_time = defaultdict(int)
 for call,reci,at_time,dura_tele in calls:
     date = datetime.strptime(at_time, "%d-%m-%Y %H:%M:%S")
     if date.year == year and date.month == month:
-        phone_and_time[call] += float(dura_tele)
-        phone_and_time[reci] += float(dura_tele)
+        phone_and_time[call] += int(dura_tele)
+        phone_and_time[reci] += int(dura_tele)
 number_rs = ""
-total_time_rs = 0.0
+total_time_rs = 0
 for key in phone_and_time:
     if total_time_rs < phone_and_time[key]:
-	total_time_rs = phone_and_time[key]
-	number_rs = key
-print("{} spent the longest time, {} seconds, on the phone during 
-September 2016.".format(number_rs,total_time_rs))
+	    total_time_rs = phone_and_time[key]
+	    number_rs = key
+        
+print("{} spent the longest time, {} seconds, on the phone during September 2016.".format(number_rs,total_time_rs))

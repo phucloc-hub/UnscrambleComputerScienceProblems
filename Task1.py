@@ -29,7 +29,7 @@ while length_of_texts > i:
 i = 0
 while length_of_calls > i:
 	resultSet.add(calls[i][0])
-	resultSet.add(calls[i][0])
+	resultSet.add(calls[i][1])
 	i += 1
 print("There are {} different telephone numbers in the records.".format(
     len(resultSet)))

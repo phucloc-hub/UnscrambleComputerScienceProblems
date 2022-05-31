@@ -50,8 +50,8 @@ code_result = []
 length_of_calls = len(calls)
 for i in range(length_of_calls):
     if calls[i][0][0:5] == '(080)':
-	index_of_x = 0
-	index_of_x = calls[i][1].find(')')
+        index_of_x = 0
+        index_of_x = calls[i][1].find(')')
         if index_of_x != 0:
             code_result.append(calls[i][1][0:index_of_x+1])
         elif calls[i][1][0:3] == '140':
@@ -72,5 +72,4 @@ for code in code_result:
 #End Of Part A
 
 # Part B
-print("{0:.2f} percent of calls from fixed lines in Bangalore are calls
-to other fixed lines in Bangalore.".format((count/length_of_rs)*100))
+print("{0:.2f} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.".format((count/length_of_rs)*100))
