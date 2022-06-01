@@ -2,15 +2,22 @@ Analysis
 
 Task 0:
  - Time Complexity - O(1)
+ - This algorithm is constant time because has a running time independent of the input size
 
 Task 1:
  - Time Complexity - O(n)
+ - This algorithm is linear time because it has a for-loop function that iterates from 1 to n
 
 Task 2:
  - Time Complexity - O(n)
+ - This algorithm is linear time because it has a for-loop function that iterates from 1 to n
 
 Task 3:
- - Time Complexity - O(n)
- 
+ - Time Complexity - O(nlog(n))
+ - This algorithm is superlinear time because it has a for-loop function that iterates from 1 to n. However a sorting function which is 0(nlogn),
+so the time complexity can be simplified to O(nlog(n))
+   
 Task 4:
- - Time Complexity - O(n)
+ - Time Complexity - O(nlog(n))
+ - This algorithm is superlinear time because it has a for-loop function that iterates from 1 to n. However a sorting function which is 0(nlogn),
+so the time complexity can be simplified to O(nlog(n))
