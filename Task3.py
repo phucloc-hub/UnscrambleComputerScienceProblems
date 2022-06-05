@@ -52,7 +52,7 @@ for i in range(length_of_calls):
     if calls[i][0][0:5] == '(080)':
         index_of_x = 0
         index_of_x = calls[i][1].find(')')
-        if index_of_x != 0:
+        if index_of_x != -1:
             code_result.append(calls[i][1][0:index_of_x+1])
         elif calls[i][1][0:3] == '140':
             code_result.append('140')
